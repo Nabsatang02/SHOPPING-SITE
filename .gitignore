@@ -1,3 +1,4 @@
 
 instance/database.db
 /website/__pycache__
+/.vscode
