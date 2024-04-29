@@ -1,6 +1,44 @@
 {% extends "template.html" %}
 {% block title %} Home {% endblock %}
 {% block content %} 
+
+<br/>
+<head>
+
+    <script type="text/javascript">
+    
+    var msg = new Array
+    
+    function randomIntFromInterval(min, max) { // generate a random number from list
+      return Math.floor(Math.random() * (max - min + 1) + min)
+    }
+    
+    var today = randomIntFromInterval(1, 5)
+    
+    msg[1] = "There are no seagulls in Hawaii";
+    msg[2] = "Feral pigs ate and completely destroyed $22,000 worth of cocaine that had been hidden in an Italian forest.";
+    msg[3] = "Scientists believe that early human ancestors used to have three eyelids. One of the eyelids eventually became the small fold in the corner of human eyes today.";
+    msg[4] = "Capitonyms are words which change their meaning if the first letter is capitalized. For example: Turkey (the country) and turkey (the bird).";
+    msg[5] = "Killing a dolphin in ancient Greece was considered sacrilegious and was punishable by death.";
+    
+    function writeMessage() { 
+    document.write(msg[today]);
+    }
+    
+    </script>
+    </head>
+    
+    <body>
+    
+    <strong>Daily Message:</strong>  
+    
+    <script>
+    writeMessage();
+    </script>
+    
+    </body>
+    <br/>
+
 <h1 align="center">Notes</h1>
 <ul class="list-group list-group-flush" id="notes">
     {% for note in user.notes %}
